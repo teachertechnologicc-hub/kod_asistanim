@@ -1,0 +1,15 @@
+# Dinamik Döviz ve Akıllı Kumbara Asistanı
+
+eklenen_tl_tutari = float(input("Kumbaraya eklenen TL miktarını giriniz: "))
+guncel_doviz_kuru = float(input("Güncel döviz kurunu giriniz (ör. 34.55): "))
+
+# Temel güvenlik kontrolü: sıfıra bölme hatasını önleme
+if guncel_doviz_kuru <= 0:
+    print("Hata: Döviz kuru sıfırdan büyük olmalıdır.")
+else:
+    doviz_karsiligi = eklenen_tl_tutari / guncel_doviz_kuru
+
+    print("\n--- KUMBARA İŞLEM ÖZETİ ---")
+    print(f"Eklenen Tutar : {eklenen_tl_tutari:.2f} TL")
+    print(f"Güncel Kur    : {guncel_doviz_kuru:.2f} TL")
+    print(f"Döviz Karşılığı: {doviz_karsiligi:.2f} birim")
